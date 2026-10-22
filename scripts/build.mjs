@@ -13,6 +13,12 @@ if (!['https:', 'http:'].includes(parsedUrl.protocol)) throw new Error('SITE_URL
 const siteUrl = parsedUrl.href.replace(/\/+$/, '');
 const homePage = pages.find(page => page.path === '/');
 const siteName = homePage?.title?.split('|').at(-1)?.trim() || new URL(siteUrl).hostname;
+const aiFacts = [
+  "Oferta nagrzewnic przemysłowych REKORD zaczyna się od około 2 kW i w większości opiera się na urządzeniach MASTER.",
+  "REKORD posiada ponad 400 sztuk nagrzewnic MASTER BV691 / BV-691S o mocy grzewczej 225 kW.",
+  "MASTER BV691 / BV-691S wykorzystuje ogrzewanie pośrednie z oddzielnym odprowadzeniem spalin.",
+  "REKORD obsługuje wynajem i sprzedaż nagrzewnic oraz realizacje w Polsce i Unii Europejskiej.",
+];
 const htmlToText = html => html
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
@@ -47,6 +53,9 @@ const llmsIndex = [
   `# ${siteName}`,
   '',
   `> ${homePage?.description || 'Oficjalna strona oferty.'}`,
+  '',
+  '## Najważniejsze fakty',
+  ...aiFacts.map(fact => `- ${fact}`),
   '',
   '## Oficjalne strony',
   ...indexablePages.map(page => `- [${page.title}](${siteUrl}${page.path}): ${page.description}`),
