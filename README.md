@@ -1,14 +1,19 @@
 # Nagrzewamy
 
+**Strona:** [popielseba.github.io/nagrzewamy](https://popielseba.github.io/nagrzewamy/)  
+**Repozytorium:** [PopielSeba/nagrzewamy](https://github.com/PopielSeba/nagrzewamy)
+
 Polskojęzyczny serwis wynajmu i sprzedaży nagrzewnic przemysłowych. Strona jest generowana do zwykłych plików HTML, CSS i JavaScript. Projekt wymaga **Node.js 22 lub nowszego** i nie ma zależności npm potrzebnych do budowania ani działania strony.
 
 Wersja początkowa przedstawia model **MASTER BV-691S, 225 kW, ogrzewanie pośrednie**. Oferta obejmuje dobór konfiguracji i koordynację dostawy w Polsce oraz Unii Europejskiej. Sprzedaż i wynajem prowadzą do indywidualnego zapytania; na stronie nie ma wymyślonych cen, stanów magazynowych ani deklaracji natychmiastowej dostępności.
 
-## Stan przygotowania
+## Adres i publikacja
 
 **`https://nagrzewamy.pl` to planowany adres, ustawiony jako domyślna wartość `SITE_URL`. W ramach przygotowania projektu domena nie została zarejestrowana ani podłączona.** Przed publikacją ustaw rzeczywisty adres, pod którym strona ma być dostępna. Od `SITE_URL` zależą adresy canonical, mapa witryny i adresy w danych strukturalnych.
 
-Pliki wdrożeniowe są przygotowaną konfiguracją. Nie oznaczają, że repozytorium GitHub, hosting albo publikacja zostały już uruchomione. Oba workflow GitHub mają wyłącznie zdarzenie `workflow_dispatch`: zapis plików i zwykły push nie uruchamiają tych workflow.
+Strona została opublikowana w GitHub Pages. [Wdrożenie z 22 października 2026 r.](https://github.com/PopielSeba/nagrzewamy/actions/runs/39742933094) zakończyło się pomyślnie po budowaniu, kontroli dziewięciu stron i testach formularza. Sprawdzono również nawigację, galerię, przygotowanie zapytań oraz układ mobilny przy szerokości 390 px.
+
+Oba workflow GitHub mają wyłącznie zdarzenie `workflow_dispatch`: zapis plików i zwykły push nie uruchamiają publikacji. Kolejne wdrożenie uruchom przez Actions → Publikacja GitHub Pages (ręczna) → Run workflow.
 
 ## Uruchomienie lokalne
 
