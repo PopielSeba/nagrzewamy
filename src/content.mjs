@@ -11,8 +11,8 @@ export const company = {
 
 export const faq = [
   {
-    q: 'Jaką nagrzewnicę oferujecie?',
-    a: 'Oferujemy nagrzewnicę MASTER BV-691S o mocy grzewczej 225 kW, pracującą w systemie ogrzewania pośredniego. Zapytaj o wynajem lub indywidualną ofertę sprzedaży dla swojego projektu.',
+    q: 'Jakie nagrzewnice oferujecie?',
+    a: 'Oferta obejmuje nagrzewnice od 2 kW mocy grzewczej, w większości urządzenia marki MASTER. Flagowym modelem naszej floty jest MASTER BV691 / BV-691S 225 kW — posiadamy ponad 400 sztuk tego modelu.',
   },
   {
     q: 'Jakie obiekty można ogrzewać?',
@@ -85,12 +85,12 @@ export const useCases = [
 
 export const benefits = [
   {
-    title: '225 kW mocy grzewczej',
-    description: 'MASTER BV-691S jest przeznaczony do ogrzewania dużych kubatur. Pomożemy ocenić jego zastosowanie w Twoim obiekcie.',
+    title: 'Nagrzewnice od 2 kW',
+    description: 'Oferta obejmuje zarówno mniejsze urządzenia, jak i przemysłowe nagrzewnice do dużych kubatur. Większość naszej oferty opiera się na sprzęcie MASTER.',
   },
   {
-    title: 'Ogrzewanie pośrednie',
-    description: 'Ciepłe powietrze trafia do ogrzewanego obiektu, a spaliny są odprowadzane oddzielnie na zewnątrz.',
+    title: 'Ponad 400 MASTER BV691',
+    description: 'Flagowe nagrzewnice MASTER BV691 / BV-691S 225 kW tworzą trzon dużej floty wynajmowej i pozwalają obsługiwać także rozbudowane realizacje.',
   },
   {
     title: 'Dobór konfiguracji',
@@ -121,11 +121,11 @@ export const servicePages = {
   rental: {
     eyebrow: 'Wynajem nagrzewnic',
     title: 'Ogrzewanie na czas Twojego projektu',
-    intro: 'Wynajmij nagrzewnicę MASTER BV-691S o mocy 225 kW do hali namiotowej, magazynu, obiektu tymczasowego lub na budowę. Pomożemy dobrać konfigurację i zaplanować dostawę w Polsce lub Unii Europejskiej.',
+    intro: 'Wynajmij nagrzewnicę dopasowaną do zadania — od mniejszych urządzeń od 2 kW po flagowe MASTER BV691 / BV-691S 225 kW. Posiadamy ponad 400 sztuk flagowego modelu i duży stock dostępny do wynajmu od ręki. Pomożemy dobrać konfigurację i zaplanować dostawę w Polsce lub Unii Europejskiej.',
     sections: [
       {
-        title: 'Wynajem krótkoterminowy i długoterminowy',
-        text: 'Dopasujemy ofertę do planowanego okresu użytkowania sprzętu. Podaj datę rozpoczęcia, przewidywany czas pracy oraz miejsce realizacji, abyśmy mogli potwierdzić dostępność i uzgodnić warunki wynajmu.',
+        title: 'Duży stock i elastyczny wynajem',
+        text: 'We flocie mamy ponad 400 sztuk flagowych MASTER BV691 / BV-691S 225 kW oraz mniejsze nagrzewnice od 2 kW. Duży stock pozwala obsługiwać zarówno pojedyncze potrzeby, jak i duże realizacje. Wynajem przygotowujemy krótkoterminowo lub długoterminowo.',
       },
       {
         title: 'Konfiguracja dopasowana do obiektu',
