@@ -8,7 +8,9 @@ import { fileURLToPath } from 'node:url';
 const defaultDist = fileURLToPath(new URL('../dist/', import.meta.url));
 const dist = process.argv[2] ? path.resolve(process.argv[2]) : defaultDist;
 const basePath = ('/' + (process.env.BASE_PATH ?? '').replace(/^\/+|\/+$/g, '')).replace(/^\/$/, '');
-const expectedSiteUrl = process.env.SITE_URL?.replace(/\/+$/, '');
+const expectedSiteUrl = process.env.SITE_URL
+  ? new URL(process.env.SITE_URL).href.replace(/\/+$/, '')
+  : undefined;
 const requiredRoutes = [
   '/',
   '/wynajem-nagrzewnic/',
