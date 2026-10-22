@@ -88,7 +88,7 @@ function notFound() {
 }
 
 export const pages = [
-  { path:'/', active:'home', title:'Nagrzewamy — wynajem i sprzedaż nagrzewnic przemysłowych', description:'Wynajem i sprzedaż nagrzewnic MASTER BV-691S 225 kW. Ogrzewanie hal, magazynów i budów. Dobór konfiguracji i transport w Polsce i UE.', render:home },
+  { path:'/', active:'home', title:'Wynajem i sprzedaż nagrzewnic przemysłowych | Nagrzewamy', description:'Wynajem i sprzedaż nagrzewnic MASTER BV-691S 225 kW. Ogrzewanie hal, magazynów i budów. Dobór konfiguracji i transport w Polsce i UE.', render:home },
   { path:paths.rental, active:'rental', title:'Wynajem nagrzewnic przemysłowych 225 kW | Nagrzewamy', description:'Wynajem nagrzewnic MASTER BV-691S na projekt lub sezon. Dobór ogrzewania do hali, magazynu i budowy. Zapytaj o termin, konfigurację i dostawę.', render:()=>service('rental') },
   { path:paths.sale, active:'sale', title:'Sprzedaż nagrzewnic MASTER BV-691S 225 kW | Nagrzewamy', description:'Zapytaj o zakup nagrzewnicy olejowej MASTER BV-691S 225 kW. Indywidualna oferta, dobór konfiguracji i organizacja dostawy w Polsce oraz UE.', render:()=>service('sale') },
   { path:paths.product, active:'product', title:'MASTER BV-691S 225 kW — wynajem i sprzedaż | Nagrzewamy', description:'Poznaj nagrzewnicę olejową MASTER BV-691S 225 kW z odprowadzeniem spalin. Zdjęcia naszej floty, zastosowania i zapytanie o wynajem lub zakup.', render:product },
