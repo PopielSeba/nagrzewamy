@@ -1,6 +1,7 @@
 # Nagrzewamy
 
-**Strona:** [popielseba.github.io/nagrzewamy](https://popielseba.github.io/nagrzewamy/)  
+**Strona na Vercel:** [nagrzewamy.vercel.app](https://nagrzewamy.vercel.app/)  
+**Domena docelowa:** `https://nagrzewamy.pl` — przypisana do projektu; oczekuje na zmianę DNS w UT.pl.  
 **Repozytorium:** [PopielSeba/nagrzewamy](https://github.com/PopielSeba/nagrzewamy)
 
 Polskojęzyczny serwis wynajmu i sprzedaży nagrzewnic przemysłowych. Strona jest generowana do zwykłych plików HTML, CSS i JavaScript. Projekt wymaga **Node.js 22 lub nowszego** i nie ma zależności npm potrzebnych do budowania ani działania strony.
@@ -9,11 +10,22 @@ Wersja początkowa przedstawia model **MASTER BV-691S, 225 kW, ogrzewanie pośre
 
 ## Adres i publikacja
 
-**`https://nagrzewamy.pl` to planowany adres, ustawiony jako domyślna wartość `SITE_URL`. W ramach przygotowania projektu domena nie została zarejestrowana ani podłączona.** Przed publikacją ustaw rzeczywisty adres, pod którym strona ma być dostępna. Od `SITE_URL` zależą adresy canonical, mapa witryny i adresy w danych strukturalnych.
+Stan na 22 października 2026 r.: repozytorium zostało zaimportowane do projektu **nagrzewamy** na koncie Vercel **Sebastian's projects**. Wdrożenie jest dostępne pod adresem [nagrzewamy.vercel.app](https://nagrzewamy.vercel.app/). [Ustawienia domen projektu](https://vercel.com/sebastians-projects-e047c519/nagrzewamy/settings/domains).
 
-Strona została opublikowana w GitHub Pages. [Wdrożenie z 22 października 2026 r.](https://github.com/PopielSeba/nagrzewamy/actions/runs/39742933094) zakończyło się pomyślnie po budowaniu, kontroli dziewięciu stron i testach formularza. Sprawdzono również nawigację, galerię, przygotowanie zapytań oraz układ mobilny przy szerokości 390 px.
+Własna domena **nagrzewamy.pl** jest przypisana do środowiska Production. **www.nagrzewamy.pl** ma ustawione stałe przekierowanie **308** do domeny bez www. Obie domeny oczekują na konfigurację u obecnego operatora DNS, UT.pl. Vercel wskazał następujące rekordy:
 
-Oba workflow GitHub mają wyłącznie zdarzenie `workflow_dispatch`: zapis plików i zwykły push nie uruchamiają publikacji. Kolejne wdrożenie uruchom przez Actions → Publikacja GitHub Pages (ręczna) → Run workflow.
+| Typ | Nazwa | Wartość |
+| --- | --- | --- |
+| A | @ | `216.198.79.1` |
+| CNAME | www | `f7e10a1bc1990726.vercel-dns-017.com.` |
+
+Dotychczasowy rekord A dla domeny głównej należy zastąpić nową wartością, a rekord A dla www — rekordem CNAME. Rekord pocztowy MX i pozostałe rekordy niezwiązane ze stroną pozostają bez zmian. Przed późniejszą zmianą DNS sprawdź aktualne wartości w ustawieniach projektu; powyższe pochodzą z konfiguracji widocznej w dniu wdrożenia.
+
+Build na Vercel korzysta z domyślnego `SITE_URL=https://nagrzewamy.pl` i pustego `BASE_PATH`. Canonicale, mapa witryny i adresy w danych strukturalnych wskazują własną domenę. Kontrola opublikowanego aliasu Vercel potwierdziła 8 działających podstron, poprawne zasoby, `robots.txt`, mapę witryny, prawdziwą odpowiedź 404 oraz przekierowania HTTPS i końcowego slasha. W przeglądarce sprawdzono też galerię i przejście do formularza zakupu.
+
+Poprzednia publikacja [GitHub Pages](https://popielseba.github.io/nagrzewamy/) pozostaje dostępna do czasu zakończenia podłączenia domeny. [Wdrożenie GitHub Pages z 22 października 2026 r.](https://github.com/PopielSeba/nagrzewamy/actions/runs/39742933094) zakończyło się pomyślnie po budowaniu, kontroli dziewięciu stron i testach formularza.
+
+Oba workflow **GitHub Actions** mają wyłącznie zdarzenie `workflow_dispatch`; ich ręczne uruchamianie jest niezależne od integracji repozytorium z Vercel. Publikację GitHub Pages uruchamia się przez Actions → Publikacja GitHub Pages (ręczna) → Run workflow.
 
 ## Uruchomienie lokalne
 
@@ -101,7 +113,7 @@ Publiczna oferta używa potwierdzonego zakresu: **MASTER BV-691S, 225 kW, ogrzew
 
 | Zmienna | Znaczenie |
 | --- | --- |
-| `SITE_URL` | Pełny publiczny adres bazowy strony, bez końcowego `/`. Przy publikacji w podkatalogu obejmuje także ten podkatalog. Domyślnie: planowane `https://nagrzewamy.pl`. |
+| `SITE_URL` | Pełny publiczny adres bazowy strony, bez końcowego `/`. Przy publikacji w podkatalogu obejmuje także ten podkatalog. Domyślnie: `https://nagrzewamy.pl`. |
 | `BASE_PATH` | Prefiks ścieżek zasobów i odnośników, np. `/nagrzewamy` dla strony projektowej GitHub Pages. Dla własnej domeny i hostingu w katalogu głównym pozostaje pusty. |
 
 Przykłady konfiguracji:
