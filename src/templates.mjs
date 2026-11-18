@@ -12,8 +12,10 @@ const button = (label, href, style = 'primary', attrs = '') => `<a class="button
 const quote = (type = 'rental', label = 'Zapytaj o wynajem', style = 'primary') => button(label, `${paths.contact}?oferta=${type === 'sale' ? 'zakup' : 'wynajem'}#zapytanie`, style, `data-service-choice="${type}"`);
 const tag = text => `<p class="eyebrow"><span></span>${text}</p>`;
 
+const rekordNetworkBar = `<div class="rekord-network-bar"><nav class="rekord-network-inner" aria-label="Serwisy REKORD DYSTRYBUCJA"><strong class="rekord-network-brand">REKORD <span>DYSTRYBUCJA</span></strong><span class="rekord-network-copy">— <a href="https://rozswietlamy.pl/">Rozświetlamy.pl</a>, <a href="https://nagrzewamy.pl/">Nagrzewamy.pl</a>, <a href="https://schladzamy.pl/">Schładzamy.pl</a> i to wszystko <a href="https://zasilimy.pl/">Zasilimy.pl</a>!</span></nav></div>`;
+
 function header(active) {
-  return `<div class="utility-bar"><div class="container"><span>Ogrzewanie przemysłowe. <b>Polska i Unia Europejska.</b></span><a href="mailto:${e(company.email)}">Porozmawiajmy o Twoim projekcie ${diagonal}</a></div></div>
+  return `${rekordNetworkBar}<div class="utility-bar"><div class="container"><span>Ogrzewanie przemysłowe. <b>Polska i Unia Europejska.</b></span><a href="mailto:${e(company.email)}">Porozmawiajmy o Twoim projekcie ${diagonal}</a></div></div>
   <header class="site-header"><div class="container header-inner">${logo}<button class="menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Otwórz menu"><span></span><span></span><span class="sr-only">Menu</span></button>
   <nav id="site-nav" class="site-nav" aria-label="Menu główne">
   ${[['rental','Wynajem'],['sale','Sprzedaż'],['product','Nagrzewnice'],['repair','Serwis']].map(([key,label])=>`<a href="${paths[key]}" ${active === key ? 'aria-current="page"' : ''}>${label}</a>`).join('')}
