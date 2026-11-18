@@ -12,7 +12,7 @@ const button = (label, href, style = 'primary', attrs = '') => `<a class="button
 const quote = (type = 'rental', label = 'Zapytaj o wynajem', style = 'primary') => button(label, `${paths.contact}?oferta=${type === 'sale' ? 'zakup' : 'wynajem'}#zapytanie`, style, `data-service-choice="${type}"`);
 const tag = text => `<p class="eyebrow"><span></span>${text}</p>`;
 
-const rekordNetworkBar = `<div class="rekord-network-bar"><nav class="rekord-network-inner" aria-label="Serwisy REKORD DYSTRYBUCJA"><strong class="rekord-network-brand">REKORD <span>DYSTRYBUCJA</span></strong><span class="rekord-network-copy">— <a href="https://rozswietlamy.pl/">Rozświetlamy.pl</a>, <a href="https://nagrzewamy.pl/">Nagrzewamy.pl</a>, <a href="https://schladzamy.pl/">Schładzamy.pl</a> i to wszystko <a href="https://zasilimy.pl/">Zasilimy.pl</a>!</span></nav></div>`;
+const rekordNetworkBar = `<div class="rekord-network-bar"><nav class="rekord-network-inner" aria-label="Serwisy REKORD DYSTRYBUCJA"><strong class="rekord-network-brand">REKORD DYSTRYBUCJA</strong><div class="rekord-network-sites"><a href="https://rozswietlamy.pl/">Rozświetlamy.pl</a><span aria-hidden="true"> · </span><a href="https://nagrzewamy.pl/">Nagrzewamy.pl</a><span aria-hidden="true"> · </span><a href="https://schladzamy.pl/">Schładzamy.pl</a></div><div class="rekord-network-finale">A dodatkowo to wszystko <a href="https://zasilimy.pl/">Zasilimy.pl</a>!</div></nav></div>`;
 
 function header(active) {
   return `${rekordNetworkBar}<div class="utility-bar"><div class="container"><span>Ogrzewanie przemysłowe. <b>Polska i Unia Europejska.</b></span><a href="mailto:${e(company.email)}">Porozmawiajmy o Twoim projekcie ${diagonal}</a></div></div>
