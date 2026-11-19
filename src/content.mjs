@@ -23,6 +23,10 @@ export const faq = [
     a: 'Ciepłe powietrze jest kierowane do ogrzewanego obiektu, a spaliny są odprowadzane oddzielnie na zewnątrz. Sposób ustawienia urządzenia i rozprowadzenia powietrza ustalamy dla danego miejsca pracy.',
   },
   {
+    q: 'Jak ogrzać halę namiotową zimą?',
+    a: 'Przy ogrzewaniu hali namiotowej liczą się kubatura, izolacja poszycia, temperatura zewnętrzna, częstotliwość otwierania bram i oczekiwana temperatura wewnątrz. Można rozważyć nagrzewnice z ogrzewaniem pośrednim oraz odpowiednie rozprowadzenie ciepłego powietrza. Moc i liczbę urządzeń dobieramy indywidualnie; sama powierzchnia hali nie wystarcza do rzetelnej wyceny.',
+  },
+  {
     q: 'Czy pomagacie dobrać konfigurację ogrzewania?',
     a: 'Tak. Podaj wymiary i przeznaczenie obiektu, oczekiwaną temperaturę, warunki pracy oraz planowany termin. Na tej podstawie pomożemy dobrać konfigurację i sposób rozprowadzenia ciepłego powietrza.',
   },
